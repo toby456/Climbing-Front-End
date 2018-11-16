@@ -26,8 +26,9 @@ getAllRoutes = () => {
 createDeleteButton =(cell,row) => {
       return <button id={row.routeID} className="btn btn-danger" onClick={() => this.deleteRoute(row.routeID)}>Delete Route</button>;
     }
-    deleteRoute = (event) => {
-      axios.delete('http://localhost:8081/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
+
+deleteRoute = (event) => {
+  axios.delete('http://localhost:8082/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
     window.location.reload()
       });
     }
@@ -43,7 +44,7 @@ createDeleteButton =(cell,row) => {
           <BootstrapTable data={this.state.allroutes}
           striped
           search>
-            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='ID' isKey>ID</TableHeaderColumn>
+            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='routeID' isKey>ID</TableHeaderColumn>
             <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='climbStatus'>Climb Status</TableHeaderColumn>
             <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='difficulty'>Grade</TableHeaderColumn>
             <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'9%'} dataField='routeName'>Route Name</TableHeaderColumn>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import AllRoutesbtn from './AllRoutesbtn.js'
 import AddRoute from './AddRoute'
+import UpdateBtn from './UpdateBtn'
 
 
 
@@ -15,6 +16,10 @@ class App extends Component {
         <br/>
         <div>
         <AllRoutesbtn/>
+      </div>
+      <br/>
+      <div>
+      <UpdateBtn/>
       </div>
       <div id= 'routes'></div>
       </div>
