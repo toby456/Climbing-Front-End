@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AllRoutes from './AllRoutes'
-import RouteForm from './RouteForm'
+import AllRoutesbtn from './AllRoutesbtn.js'
+import AddRoute from './AddRoute'
 
 
 
@@ -9,9 +9,14 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Welcome to the climbing app!</h1>
-        <RouteForm/>
-        <p className="Table-header">All Routes</p>
-        <AllRoutes/>
+        <div>
+        <AddRoute/>
+        </div>
+        <br/>
+        <div>
+        <AllRoutesbtn/>
+      </div>
+      <div id= 'routes'></div>
       </div>
     );
   }

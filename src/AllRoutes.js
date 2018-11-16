@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {BootstrapTable,TableHeaderColumn} from 'react-bootstrap-table';
 import axios from 'axios'
+import ReactDOM from 'react-dom';
 
 
 
@@ -22,6 +23,15 @@ getAllRoutes = () => {
 }
 
 
+createDeleteButton =(cell,row) => {
+      return <button id={row.routeID} className="btn btn-danger" onClick={() => this.deleteRoute(row.routeID)}>Delete Route</button>;
+    }
+    deleteRoute = (event) => {
+      axios.delete('http://localhost:8081/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
+    window.location.reload()
+      });
+    }
+
 
   componentDidMount() {
     this.getAllRoutes();
@@ -32,18 +42,16 @@ getAllRoutes = () => {
         <div>
           <BootstrapTable data={this.state.allroutes}
           striped
-          expandableRow={ this.isExpandableRow }
-          expandComponent={ this.expandComponent }
           search>
-
-            <TableHeaderColumn Column width={'5%'} dataField='ID' isKey>ID</TableHeaderColumn>
-            <TableHeaderColumn Column width={'8%'}dataField='climbStatus'>Climb Status</TableHeaderColumn>
-            <TableHeaderColumn Column width={'5%'}dataField='difficulty'>Grade</TableHeaderColumn>
-            <TableHeaderColumn Column width={'9%'}dataField='routeName'>Route Name</TableHeaderColumn>
-            <TableHeaderColumn Column width={'14%'}dataField='location'>Location</TableHeaderColumn>
-            <TableHeaderColumn Column width={'7%'}dataField='typeOfClimb'>Type of Climb</TableHeaderColumn>
-            <TableHeaderColumn Column width={'26%'}dataField='climbDescription'>Climb Description</TableHeaderColumn>
-            <TableHeaderColumn Column width={'26%'}dataField='crux'>Crux</TableHeaderColumn>
+            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='ID' isKey>ID</TableHeaderColumn>
+            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='climbStatus'>Climb Status</TableHeaderColumn>
+            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='difficulty'>Grade</TableHeaderColumn>
+            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'9%'} dataField='routeName'>Route Name</TableHeaderColumn>
+            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'9%'} dataField='location'>Location</TableHeaderColumn>
+            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='typeOfClimb'>Type of Climb</TableHeaderColumn>
+            <TableHeaderColumn searchable={ false } tdStyle={{ whiteSpace: 'unset'}} Column width={'25%'} dataField='climbDescription'>Climb Description</TableHeaderColumn>
+            <TableHeaderColumn searchable={ false } tdStyle={{ whiteSpace: 'unset' }} Column width={'25%'} dataField='crux'>Crux</TableHeaderColumn>
+            <TableHeaderColumn dataField='button' Column width={'8%'} dataFormat={this.createDeleteButton}>Delete</TableHeaderColumn>
           </BootstrapTable>
         </div>
       );
