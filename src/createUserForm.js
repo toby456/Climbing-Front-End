@@ -2,49 +2,32 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import ReactDOM from 'react-dom';
-import AllRoutes from './AllRoutes'
 
-class UpdateForm extends Component {
+class createUserForm extends Component {
 
-
-
-  functionShowChanges() {
-  ReactDOM.render(<AllRoutes/>,document.getElementById('routes'));
-}
-
-  updateRoute = (event) => {
+  create = (event) => {
     event.preventDefault();
     var data={
-      routeID: document.getElementById('routeID').value,
       climbStatus: document.getElementById('climbStatus').value,
       difficulty: document.getElementById('difficulty').value,
       routeName: document.getElementById('routeName').value,
       location: document.getElementById('location').value,
       typeOfClimb: document.getElementById('typeOfClimb').value,
       climbDescription: document.getElementById('climbDescription').value,
-      crux: document.getElementById('crux').value,
-      userID: document.getElementById('idOfUserAddingRoute').value
-
+      crux: document.getElementById('crux').value
     }
-    axios.post('http://localhost:8082/Climbing/rest/Route/updateRoute', data)
+    axios.post('http://localhost:8082/Climbing/rest/Route/createRoute', data)
       .then((response) => {
         console.log(response.data);
         window.location.reload();
-
       });
-
-    event.functionShowChanges();
-    }
+  }
 
 
 
 render() {
   return (
     <div>
-    <br/>
-    ID number of route to update
-    <br/>
-    <input type ="number" id ="routeID" placeholder = "Route ID to Update" />
     <br/>
     Climb Status
     <br/>
@@ -74,14 +57,16 @@ render() {
     <br/>
     <input type = "text" id = "crux" placeholder = "Describe crux moves" />
     <br/>
+
+    Please enter your unique ID number, if you do not have one please click <a href="www.google.com">here</a> to create an account
     <br/>
     <input type ="number" id ="idOfUserAddingRoute" placeholder = "ID number" />
     <br/>
     <br/>
-    <button className="btn btn-primary" onClick={this.updateRoute}>Update Route</button>
+    <button className="btn btn-primary" onClick={this.createRoute}>Add Route</button>
     </div>
   );
 }
 }
 
-export default UpdateForm;
+export default createUserForm;
