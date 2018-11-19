@@ -7,7 +7,7 @@ import CreateUserForm from './CreateUserForm'
 class CreateUserBtn extends Component {
 
   functionCreateUser() {
-  ReactDOM.render(<CreateUserForm/>,document.getElementById('users'));
+  ReactDOM.render(<CreateUserForm/>,document.getElementById('forms'));
 }
   render() {
     return (

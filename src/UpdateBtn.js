@@ -5,7 +5,7 @@ import UpdateForm from './UpdateForm'
 class UpdateBtn extends Component {
 
   functionUpdateRoutes() {
-  ReactDOM.render(<UpdateForm/>,document.getElementById('routes'));
+  ReactDOM.render(<UpdateForm/>,document.getElementById('forms'));
 }
   render() {
     return (

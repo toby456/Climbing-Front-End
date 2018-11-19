@@ -6,7 +6,7 @@ import RouteForm from './RouteForm.js';
 class AddRoute extends Component {
 
   functionAddRoutes() {
-  ReactDOM.render(<RouteForm/>,document.getElementById('routes'));
+  ReactDOM.render(<RouteForm/>,document.getElementById('forms'));
 }
   render() {
     return (

@@ -3,6 +3,7 @@ import AllRoutesbtn from './AllRoutesbtn.js'
 import AddRoute from './AddRoute.js'
 import UpdateBtn from './UpdateBtn.js'
 import CreateUserBtn from './CreateUserBtn.js'
+import AllUsersBtn from './AllUsersBtn'
 
 
 
@@ -26,8 +27,12 @@ class App extends Component {
       <div>
       <CreateUserBtn/>
       </div>
-      <div id= 'users'></div>
-      <div id= 'routes'></div>
+      <br/>
+      <div>
+      <AllUsersBtn/>
+      </div>
+      <div id = 'forms'></div>
+      <div id= 'stuff'></div>
       </div>
     );
   }

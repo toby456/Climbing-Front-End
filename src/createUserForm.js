@@ -8,7 +8,7 @@ class CreateUserForm extends Component {
   createUser = (event) => {
     event.preventDefault();
     var data={
-      userName: document.getElementById('username').value
+      userName: document.getElementById('userName').value
     }
     axios.post('http://localhost:8082/Climbing/rest/User/createUser', data)
       .then((response) => {
@@ -25,7 +25,8 @@ render() {
     <br/>
     User Name
     <br/>
-    <input   type = "text" id = "userName" placeholder = "Enter desired User Name" />
+    <input   type = "text" id = "userName" placeholder = "Enter User Name" />
+    <br/>
     <br/>
     <button className="btn btn-primary" onClick={this.createUser}>Create User</button>
     </div>

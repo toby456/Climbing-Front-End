@@ -5,7 +5,7 @@ import AllRoutes from './AllRoutes.js';
 class AllRoutesbtn extends Component {
 
   functionAllRoutes() {
-  ReactDOM.render(<AllRoutes/>,document.getElementById('routes'));
+  ReactDOM.render(<AllRoutes/>,document.getElementById('stuff'));
 }
   render() {
     return (
