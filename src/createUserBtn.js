@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import CreateUserForm from './CreateUserForm'
 
 
 
-class createUserBtn extends Component {
+class CreateUserBtn extends Component {
 
   functionCreateUser() {
-  ReactDOM.render(<createUserForm/>,document.getElementById('users'));
+  ReactDOM.render(<CreateUserForm/>,document.getElementById('users'));
 }
   render() {
     return (
@@ -18,4 +19,4 @@ class createUserBtn extends Component {
 
 
 }
-  export default createUserBtn;
+  export default CreateUserBtn;

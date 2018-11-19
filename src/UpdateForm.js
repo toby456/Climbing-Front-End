@@ -8,9 +8,7 @@ class UpdateForm extends Component {
 
 
 
-  functionShowChanges() {
-  ReactDOM.render(<AllRoutes/>,document.getElementById('routes'));
-}
+
 
   updateRoute = (event) => {
     event.preventDefault();
@@ -24,16 +22,12 @@ class UpdateForm extends Component {
       climbDescription: document.getElementById('climbDescription').value,
       crux: document.getElementById('crux').value,
       userID: document.getElementById('idOfUserAddingRoute').value
-
     }
-    axios.post('http://localhost:8082/Climbing/rest/Route/updateRoute', data)
+    axios.put('http://localhost:8082/Climbing/rest/Route/updateRoute', data)
       .then((response) => {
         console.log(response.data);
         window.location.reload();
-
       });
-
-    event.functionShowChanges();
     }
 
 
@@ -74,8 +68,9 @@ render() {
     <br/>
     <input type = "text" id = "crux" placeholder = "Describe crux moves" />
     <br/>
+    User ID
     <br/>
-    <input type ="number" id ="idOfUserAddingRoute" placeholder = "ID number" />
+    <input type ="number" id ="idOfUserAddingRoute" placeholder = "User ID number" />
     <br/>
     <br/>
     <button className="btn btn-primary" onClick={this.updateRoute}>Update Route</button>
