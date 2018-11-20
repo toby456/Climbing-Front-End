@@ -3,6 +3,7 @@ import axios from 'axios';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import ReactDOM from 'react-dom';
 import AllRoutes from './AllRoutes'
+import {urlPort} from './Config.js'
 
 class UpdateForm extends Component {
 
@@ -23,7 +24,7 @@ class UpdateForm extends Component {
       crux: document.getElementById('crux').value,
       userID: document.getElementById('idOfUserAddingRoute').value
     }
-    axios.put('http://localhost:8082/Climbing/rest/Route/updateRoute', data)
+    axios.put('http://localhost:' + urlPort + '/Climbing/rest/Route/updateRoute', data)
       .then((response) => {
         console.log(response.data);
         window.location.reload();

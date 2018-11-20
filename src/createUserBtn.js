@@ -12,7 +12,7 @@ class CreateUserBtn extends Component {
   render() {
     return (
       <div>
-      <button className="btn btn-primary btn-lg btn-block" onClick={this.functionCreateUser}>Create User</button>
+      <button className="btn btn-primary btn-lg" onClick={this.functionCreateUser}>Create User</button>
       </div>
     );
   }

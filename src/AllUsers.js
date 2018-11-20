@@ -10,7 +10,9 @@ class BSTable extends React.Component {
 
   render() {
     return (
-      <BootstrapTable data={ this.props.data } options={ { noDataText: 'There are no routes for this user' } }>
+      <BootstrapTable className= "table-dark"
+      data={ this.props.data }
+      options={ { noDataText: 'There are no routes for this user' } }>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='routeID' isKey={ true }>ID</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='climbStatus'>Climb Status</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='difficulty'>Grade</TableHeaderColumn>
@@ -61,7 +63,8 @@ expandComponent(row) {
   render() {
       return (
         <div>
-          <BootstrapTable data={this.state.allUsers}
+          <BootstrapTable className= "table-dark"
+          data={this.state.allUsers}
           striped
           search
           expandableRow={ this.isExpandableRow }

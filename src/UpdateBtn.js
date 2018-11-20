@@ -10,7 +10,7 @@ class UpdateBtn extends Component {
   render() {
     return (
       <div>
-      <button className="btn btn-dark btn-lg btn-block" onClick={this.functionUpdateRoutes}>Update Routes</button>
+      <button className="btn btn-warning btn-lg" onClick={this.functionUpdateRoutes}>Update Routes</button>
       </div>
     );
   }

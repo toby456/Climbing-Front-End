@@ -1,9 +1,17 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
 
+}
+
+.bgimg {
+    background-image: url("climbing_background.jpg");
+    height: 960px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background size: cover;
 }
 
 .App-header {
