@@ -14,7 +14,8 @@ class RouteForm extends Component {
       location: document.getElementById('location').value,
       typeOfClimb: document.getElementById('typeOfClimb').value,
       climbDescription: document.getElementById('climbDescription').value,
-      crux: document.getElementById('crux').value
+      crux: document.getElementById('crux').value,
+      userID: document.getElementById('idOfUserAddingRoute').value
     }
     axios.post('http://localhost:8082/Climbing/rest/Route/createRoute', data)
       .then((response) => {

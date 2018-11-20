@@ -11,7 +11,7 @@ class AddRoute extends Component {
   render() {
     return (
       <div>
-      <button className="btn btn-primary" onClick={this.functionAddRoutes}>Create Route</button>
+      <button className="btn btn-primary btn-lg" onClick={this.functionAddRoutes}>Create Route</button>
       </div>
     );
   }

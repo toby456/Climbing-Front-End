@@ -7,28 +7,24 @@ import AllUsersBtn from './AllUsersBtn'
 
 
 
+
+
 class App extends Component {
+
+
   render() {
     return (
       <div className="App">
         <h1>Welcome to the climbing app!</h1>
-        <div>
+        <div className="btn-group-lg btn-group-vertical">
         <AddRoute/>
-        </div>
-        <br/>
-        <div>
+
         <AllRoutesbtn/>
-      </div>
-      <br/>
-      <div>
+
       <UpdateBtn/>
-      </div>
-      <br/>
-      <div>
+
       <CreateUserBtn/>
-      </div>
-      <br/>
-      <div>
+
       <AllUsersBtn/>
       </div>
       <div id = 'forms'></div>

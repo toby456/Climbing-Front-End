@@ -10,7 +10,7 @@ class AllUsersBtn extends Component {
   render() {
     return (
       <div>
-      <button className="btn btn-success" onClick={this.functionAllUsers}>See All Users</button>
+      <button className="btn btn-success btn-lg btn-block" onClick={this.functionAllUsers}>See All Users</button>
       </div>
     );
   }

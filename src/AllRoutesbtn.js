@@ -10,7 +10,7 @@ class AllRoutesbtn extends Component {
   render() {
     return (
       <div>
-      <button className="btn btn-success" onClick={this.functionAllRoutes}>See All Routes</button>
+      <button className="btn btn-success btn-lg btn-block"  onClick={this.functionAllRoutes}>See All Routes</button>
       </div>
     );
   }

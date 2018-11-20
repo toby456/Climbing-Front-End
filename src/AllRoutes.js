@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 
 
 
+
 class AllRoutes extends Component {
 
   constructor(props) {
@@ -29,7 +30,7 @@ createDeleteButton =(cell,row) => {
 
 deleteRoute = (event) => {
   axios.delete('http://localhost:8082/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
-    window.location.reload()
+    this.forceUpdate();
       });
     }
 
