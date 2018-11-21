@@ -31,41 +31,52 @@ render() {
   return (
     <div>
     <br/>
+    <form className = "formUser" style = {{backgroundColor: "White"}}>
+    <label style= {{color: "black"}}>
     Climb Status
     <br/>
-    <input   type = "text" id = "climbStatus" placeholder = "E.g. In Progress" />
-    <br/>
+    <input className = "inputBox"  type = "text" id = "climbStatus" placeholder = "E.g. In Progress" />
+    </label>
+    <label style= {{color: "black"}}>
     Climb Grade
     <br/>
-    <input type = "text" id = "difficulty" placeholder = "For Example: V5 or 7a+" />
-    <br/>
+    <input className = "inputBox" type = "text" id = "difficulty" placeholder = "For Example: V5 or 7a+" />
+    </label>
+    <label style= {{color: "black"}}>
     Route Name
     <br/>
-    <input type = "text" id = "routeName" placeholder = "Enter route name" />
-    <br/>
+    <input className = "inputBox" type = "text" id = "routeName" placeholder = "Enter route name" />
+    </label>
+    <label style= {{color: "black"}}>
     Location of Route
     <br/>
-    <input type = "text" id = "location" placeholder = "Where is the route?" />
-    <br/>
+    <input className = "inputBox" type = "text" id = "location" placeholder = "Where is the route?" />
+    </label>
+    <label style= {{color: "black"}}>
     Type of Climb
     <br/>
-    <input type = "text" id = "typeOfClimb" placeholder = "E.g. Trad" />
-    <br/>
+    <input className = "inputBox" type = "text" id = "typeOfClimb" placeholder = "E.g. Trad" />
+    </label>
+    <label style= {{color: "black"}}>
     Climb Description
     <br/>
-    <input type = "text" id = "climbDescription" placeholder = "E.g. Moves or Betas" />
-    <br/>
+    <input className = "inputBox" type = "text" id = "climbDescription" placeholder = "E.g. Moves or Betas" />
+    </label>
+    <label style= {{color: "black"}}>
     Crux
     <br/>
-    <input type = "text" id = "crux" placeholder = "Describe crux moves" />
-    <br/>
-
+    <input className = "inputBox" type = "text" id = "crux" placeholder = "Describe crux moves" />
+    </label>
+    <label style= {{color: "black"}}>
     Please enter your unique ID number, if you do not have one please click <a href="www.google.com">here</a> to create an account
     <br/>
-    <input type ="number" id ="idOfUserAddingRoute" placeholder = "ID number" />
-    <br/>
+    <input className = "inputBox" type ="number" id ="idOfUserAddingRoute" placeholder = "ID number" />
+    </label>
     <br/>
     <button className="btn btn-primary" onClick={this.createRoute}>Add Route</button>
+    </form>
+    <br/>
+    <br/>
     </div>
   );
 }

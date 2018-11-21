@@ -10,10 +10,11 @@ class BSTable extends React.Component {
 
   render() {
     return (
-      <BootstrapTable className= "table-dark"
+      <BootstrapTable className="table"
       data={ this.props.data }
-      options={ { noDataText: 'There are no routes for this user' } }>
-      <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='routeID' isKey={ true }>ID</TableHeaderColumn>
+      options={ { noDataText: 'There are no routes for this user' } }
+      >
+      <TableHeaderColumn  style= {{color: "black"}} tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='routeID' isKey={ true }>ID</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='climbStatus'>Climb Status</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='difficulty'>Grade</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'9%'} dataField='routeName'>Route Name</TableHeaderColumn>
@@ -72,6 +73,8 @@ expandComponent(row) {
             <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='userID' isKey={ true }>ID</TableHeaderColumn>
             <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'12%'} dataField='userName'>User Name</TableHeaderColumn>
           </BootstrapTable>
+          <br/>
+          <br/>
         </div>
       );
     }

@@ -8,9 +8,10 @@
 
 .bgimg {
     background-image: url("climbing_background.jpg");
-    height: 960px;
+    height: 1100px;
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background size: cover;
 }
 
@@ -23,6 +24,19 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.formUser {
+  border-radius: 25px;
+    border: 2px solid #1ed8d4;
+    padding: 20px;
+    width: 250px;
+
+}
+
+.inputBox {
+  border: 2px solid black;
+    border-radius: 4px;
 }
 
 .App-link {

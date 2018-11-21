@@ -3,6 +3,7 @@ import axios from 'axios';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import ReactDOM from 'react-dom';
 import {urlPort} from './Config.js'
+import './App.css'
 
 class CreateUserForm extends Component {
 
@@ -13,8 +14,6 @@ class CreateUserForm extends Component {
     }
     axios.post('http://localhost:' + urlPort + '/Climbing/rest/User/createUser', data)
       .then((response) => {
-        console.log(response.data);
-        this.state.allroutes.push(response.data);
         window.location.reload();
       });
   }
@@ -25,12 +24,18 @@ render() {
   return (
     <div>
     <br/>
-    User Name
     <br/>
-    <input   type = "text" id = "userName" placeholder = "Enter User Name" />
+    <form className = "formUser" style = {{backgroundColor: "white"}}>
+    <label style= {{color: "black"}}>
+    User Name:
     <br/>
-    <br/>
+    <input className = "inputBox"  type = "text" id = "userName" placeholder = "Enter User Name" />
+    </label>
     <button className="btn btn-primary" onClick={this.createUser}>Create User</button>
+
+    </form>
+    <br/>
+    <br/>
     </div>
   );
 }

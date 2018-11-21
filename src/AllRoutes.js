@@ -53,7 +53,6 @@ deleteRoute = (event) => {
           data={this.state.allroutes}
           striped
           search
-          background-color= "red"
           >
             <TableHeaderColumn  style= {{color: "black"}} tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='routeID' isKey>ID</TableHeaderColumn>
             <TableHeaderColumn  style= {{color: "white"}} tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='climbStatus'>Climb Status</TableHeaderColumn>
@@ -65,6 +64,8 @@ deleteRoute = (event) => {
             <TableHeaderColumn  style= {{color: "white"}} searchable={ false } tdStyle={{ whiteSpace: 'unset' }} Column width={'25%'} dataField='crux'>Crux</TableHeaderColumn>
             <TableHeaderColumn dataField='button' Column width={'8%'} dataFormat={this.createDeleteButton}>Delete</TableHeaderColumn>
           </BootstrapTable>
+          <br/>
+          <br/>
         </div>
       );
     }
