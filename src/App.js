@@ -28,9 +28,11 @@ class App extends Component {
       <UpdateBtn/>
       <ClearScreenBtn/>
     </div>
-    <div className= "centered" id = 'stuff'>
-    
+    <div className= "centeredform" id = 'stuff'>
+    <div id = 'table'>
+
     <h1 style= {{color: "red"}} >Welcome to betaBox</h1>
+    </div>
     </div>
     </div>
     );

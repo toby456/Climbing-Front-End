@@ -5,7 +5,7 @@ import AllUsers from './AllUsers.js';
 class AllUsersBtn extends Component {
 
   functionAllUsers() {
-  ReactDOM.render(<AllUsers/>,document.getElementById('stuff'));
+  ReactDOM.render(<AllUsers/>,document.getElementById('table'));
 }
   render() {
     return (

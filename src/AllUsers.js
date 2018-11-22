@@ -7,6 +7,17 @@ import ReactDOM from 'react-dom';
 
 class BSTable extends React.Component {
 
+  createDeleteButton =(cell,row) => {
+        return <button id={row.routeID} className="btn btn-danger" onClick={() => this.deleteRoute(row.routeID)}>Delete Route</button>;
+      }
+
+  deleteRoute = (event) => {
+    axios.delete('http://localhost:8082/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
+    window.location.reload();
+        });
+
+        }
+
 
   render() {
     return (
@@ -23,6 +34,7 @@ class BSTable extends React.Component {
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='typeOfClimb'>Type of Climb</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset'}} Column width={'25%'} dataField='climbDescription'>Climb Description</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }} Column width={'25%'} dataField='crux'>Crux</TableHeaderColumn>
+      <TableHeaderColumn dataField='button' Column width={'8%'} dataFormat={this.createDeleteButton}>Delete</TableHeaderColumn>
       </BootstrapTable>
     )
   }

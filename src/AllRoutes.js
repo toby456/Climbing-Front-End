@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {BootstrapTable,TableHeaderColumn} from 'react-bootstrap-table';
 import axios from 'axios'
 import ReactDOM from 'react-dom';
-import {urlPort} from './Config.js'
+
 
 
 
@@ -17,7 +17,7 @@ class AllRoutes extends Component {
   }
 
 getAllRoutes = () => {
-  axios.get('http://localhost:' + urlPort + '/Climbing/rest/Route/getAllRoutes').then(response =>{
+  axios.get('http://localhost:8082/Climbing/rest/Route/getAllRoutes').then(response =>{
     this.setState({
     allroutes: response.data
   });
@@ -30,16 +30,13 @@ createDeleteButton =(cell,row) => {
     }
 
 deleteRoute = (event) => {
-  axios.delete('http://localhost:' + urlPort + '/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
-    // this.forceUpdate();
-    // console.log(event);
-    // this.state.allroutes =   this.state.allroutes.filter(a => a.routeID != event.id);
-    this.setState({
-    allroutes: this.state.allroutes.filter(a => a.routeID != event.id)
+  axios.delete('http://localhost:8082/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
+window.location.reload();
   });
 
-  });
-    }
+  }
+
+
 
 
   componentDidMount() {

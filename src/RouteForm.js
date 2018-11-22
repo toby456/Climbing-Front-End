@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import ReactDOM from 'react-dom';
-import {urlPort} from './Config.js'
 
 class RouteForm extends Component {
 
@@ -18,7 +17,7 @@ class RouteForm extends Component {
       crux: document.getElementById('crux').value,
       userID: document.getElementById('idOfUserAddingRoute').value
     }
-    axios.post('http://localhost:' + urlPort + '/Climbing/rest/Route/createRoute', data)
+    axios.post('http://localhost:8082/Climbing/rest/Route/createRoute', data)
       .then((response) => {
         console.log(response.data);
         window.location.reload();

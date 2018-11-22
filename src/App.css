@@ -6,11 +6,14 @@
 
 }
 
-.centered {
+.centeredform {
   position: fixed; /* or absolute */
-  top: 50%;
+  top: 20%;
   left: 40%;
 }
+
+
+
 
 .bgimg {
     background-image: url("climbing_background.jpg");
