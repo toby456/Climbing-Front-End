@@ -49,7 +49,7 @@ deleteRoute = (event) => {
   render() {
       return (
         <div>
-          <BootstrapTable className= "table-dark"
+          <BootstrapTable className= "table"
           data={this.state.allroutes}
           striped
           search

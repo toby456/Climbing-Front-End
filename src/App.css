@@ -6,6 +6,12 @@
 
 }
 
+.centered {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 40%;
+}
+
 .bgimg {
     background-image: url("climbing_background.jpg");
     height: 1100px;
@@ -13,6 +19,10 @@
     background-position: center;
     background-repeat: repeat-y;
     background size: cover;
+}
+
+.btn-toolbars {
+  justify-content: center;
 }
 
 .App-header {

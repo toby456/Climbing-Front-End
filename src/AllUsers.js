@@ -10,7 +10,8 @@ class BSTable extends React.Component {
 
   render() {
     return (
-      <BootstrapTable className="table"
+      <BootstrapTable
+
       data={ this.props.data }
       options={ { noDataText: 'There are no routes for this user' } }
       >
@@ -64,7 +65,7 @@ expandComponent(row) {
   render() {
       return (
         <div>
-          <BootstrapTable className= "table-dark"
+          <BootstrapTable className="table"
           data={this.state.allUsers}
           striped
           search

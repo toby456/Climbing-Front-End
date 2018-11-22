@@ -5,12 +5,12 @@ import UpdateForm from './UpdateForm'
 class UpdateBtn extends Component {
 
   functionUpdateRoutes() {
-  ReactDOM.render(<UpdateForm/>,document.getElementById('forms'));
+  ReactDOM.render(<UpdateForm/>,document.getElementById('stuff'));
 }
   render() {
     return (
       <div>
-      <button className="btn btn-warning btn-lg" onClick={this.functionUpdateRoutes}>Update Routes</button>
+      <button className="btn btn-info btn-lg" onClick={this.functionUpdateRoutes}>Update Routes</button>
       </div>
     );
   }
