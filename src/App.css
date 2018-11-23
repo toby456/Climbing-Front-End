@@ -7,12 +7,13 @@
 }
 
 .header {
-  transform: translate(188%, 0%);
+  transform: translate(160%, 0%);
   border-radius: 5px;
   border: 2px solid #010203;
   padding: 5px;
-  width: 395px;
-  background: #1e5c99
+  width: 450px;
+  background: #1e5c99;
+  font-family: "Lucida Console", monospace;
 }
 
 .header2 {
