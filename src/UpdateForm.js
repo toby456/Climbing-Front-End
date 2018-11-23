@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
-import ReactDOM from 'react-dom';
-import AllRoutes from './AllRoutes'
 
 class UpdateForm extends Component {
 

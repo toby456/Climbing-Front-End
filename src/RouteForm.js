@@ -67,7 +67,7 @@ render() {
     <input className = "inputBox" type = "text" id = "crux" placeholder = "Describe crux moves" />
     </label>
     <label style= {{color: "black"}}>
-    Please enter your unique ID number, if you do not have one please click <a href="www.google.com">here</a> to create an account
+    User ID
     <br/>
     <input className = "inputBox" type ="number" id ="idOfUserAddingRoute" placeholder = "ID number" />
     </label>

@@ -51,7 +51,7 @@ window.location.reload();
           striped
           search
           >
-            <TableHeaderColumn  style= {{color: "black"}} tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='routeID' isKey>ID</TableHeaderColumn>
+            <TableHeaderColumn  style= {{color: "black"}} tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='routeID' isKey>Route ID</TableHeaderColumn>
             <TableHeaderColumn  style= {{color: "white"}} tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='climbStatus'>Climb Status</TableHeaderColumn>
             <TableHeaderColumn  style= {{color: "white"}} tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='difficulty'>Grade</TableHeaderColumn>
             <TableHeaderColumn  style= {{color: "white"}} tdStyle={{ whiteSpace: 'unset' }}  Column width={'9%'} dataField='routeName'>Route Name</TableHeaderColumn>

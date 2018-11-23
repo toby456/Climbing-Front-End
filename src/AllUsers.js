@@ -21,8 +21,8 @@ class BSTable extends React.Component {
 
   render() {
     return (
-      <BootstrapTable
 
+      <BootstrapTable
       data={ this.props.data }
       options={ { noDataText: 'There are no routes for this user' } }
       >
@@ -36,6 +36,7 @@ class BSTable extends React.Component {
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }} Column width={'25%'} dataField='crux'>Crux</TableHeaderColumn>
       <TableHeaderColumn dataField='button' Column width={'8%'} dataFormat={this.createDeleteButton}>Delete</TableHeaderColumn>
       </BootstrapTable>
+
     )
   }
 

@@ -5,7 +5,8 @@ import AllRoutes from './AllRoutes.js';
 class AllRoutesbtn extends Component {
 
   functionAllRoutes() {
-  ReactDOM.render(<AllRoutes/>,document.getElementById('stuff'));
+
+  ReactDOM.render(<AllRoutes/>,document.getElementById('table'));
 }
   render() {
     return (

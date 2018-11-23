@@ -7,13 +7,6 @@ import AllUsersBtn from './AllUsersBtn'
 import ClearScreenBtn from './ClearScreenBtn'
 import './App.css'
 
-
-
-
-
-
-
-
 class App extends Component {
 
 
@@ -28,12 +21,19 @@ class App extends Component {
       <UpdateBtn/>
       <ClearScreenBtn/>
     </div>
-    <div className= "centeredform" id = 'stuff'>
-    <div id = 'table'>
+    <br/>
+    <h1 className= "header" style= {{color: "#d5dfed"}} >Welcome to betaBox</h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div className="centeredform" id = 'stuff'></div>
+    <br/>
 
-    <h1 style= {{color: "red"}} >Welcome to betaBox</h1>
-    </div>
-    </div>
+    <br/>
+    <div className ="tablepos" id = 'table'></div>
+
+
     </div>
     );
   }
