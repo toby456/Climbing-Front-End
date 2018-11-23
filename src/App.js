@@ -28,9 +28,6 @@ class App extends Component {
     <br/>
     <br/>
     <div className="centeredform" id = 'stuff'></div>
-    <br/>
-
-    <br/>
     <div className ="tablepos" id = 'table'></div>
 
 

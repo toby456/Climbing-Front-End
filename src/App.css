@@ -15,8 +15,17 @@
   background: #1e5c99
 }
 
+.header2 {
+  transform: translate(90%, 0%);
+  border-radius: 5px;
+  border: 2px solid #010203;
+  padding: 5px;
+  width: 666px;
+  background: #1e5c99
+}
+
 .centeredform {
-  transform: translate(43%, 0%);
+  transform: translate(43%, -10%);
 }
 
 .tablepos {

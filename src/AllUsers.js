@@ -22,6 +22,8 @@ class BSTable extends React.Component {
   render() {
     return (
 
+
+
       <BootstrapTable
       data={ this.props.data }
       options={ { noDataText: 'There are no routes for this user' } }
@@ -78,13 +80,17 @@ expandComponent(row) {
   render() {
       return (
         <div>
+        <div className= "header2">
+        <h2>To see a users routes click on their table row</h2>
+        </div>
+        <br/>
           <BootstrapTable className="table"
           data={this.state.allUsers}
           striped
           search
           expandableRow={ this.isExpandableRow }
           expandComponent={ this.expandComponent}>
-            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='userID' isKey={ true }>ID</TableHeaderColumn>
+            <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='userID' isKey={ true }>User ID</TableHeaderColumn>
             <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'12%'} dataField='userName'>User Name</TableHeaderColumn>
           </BootstrapTable>
           <br/>
