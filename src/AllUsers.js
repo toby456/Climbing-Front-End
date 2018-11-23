@@ -12,7 +12,7 @@ class BSTable extends React.Component {
       }
 
   deleteRoute = (event) => {
-    axios.delete('http://localhost:8082/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
+    axios.delete('http://35.234.147.72:8080/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
     window.location.reload();
         });
 
@@ -54,7 +54,7 @@ export default class AllUsers extends Component {
   }
 
 getAllUsers = () => {
-  axios.get('http://localhost:8082/Climbing/rest/User/getAllUsers').then(response =>{
+  axios.get('http://35.234.147.72:8080/Climbing/rest/User/getAllUsers').then(response =>{
     this.setState({
     allUsers: response.data
   });

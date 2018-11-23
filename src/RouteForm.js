@@ -17,7 +17,7 @@ class RouteForm extends Component {
       crux: document.getElementById('crux').value,
       userID: document.getElementById('idOfUserAddingRoute').value
     }
-    axios.post('http://localhost:8082/Climbing/rest/Route/createRoute', data)
+    axios.post('http://35.234.147.72:8080/Climbing/rest/Route/createRoute', data)
       .then((response) => {
         console.log(response.data);
         window.location.reload();

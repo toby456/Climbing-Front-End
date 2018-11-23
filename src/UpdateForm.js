@@ -20,7 +20,7 @@ class UpdateForm extends Component {
       crux: document.getElementById('crux').value,
       userID: document.getElementById('idOfUserAddingRoute').value
     }
-    axios.put('http://localhost:8082/Climbing/rest/Route/updateRoute', data)
+    axios.put('http://35.234.147.72:8080/Climbing/rest/Route/updateRoute', data)
       .then((response) => {
         console.log(response.data);
         window.location.reload();

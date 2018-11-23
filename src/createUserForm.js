@@ -11,7 +11,7 @@ class CreateUserForm extends Component {
     var data={
       userName: document.getElementById('userName').value
     }
-    axios.post('http://localhost:8082/Climbing/rest/User/createUser', data)
+    axios.post('http://35.234.147.72:8080/Climbing/rest/User/createUser', data)
       .then((response) => {
         window.location.reload();
       });

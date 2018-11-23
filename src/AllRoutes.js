@@ -17,7 +17,7 @@ class AllRoutes extends Component {
   }
 
 getAllRoutes = () => {
-  axios.get('http://localhost:8082/Climbing/rest/Route/getAllRoutes').then(response =>{
+  axios.get('http://35.234.147.72:8080/Climbing/rest/Route/getAllRoutes').then(response =>{
     this.setState({
     allroutes: response.data
   });
@@ -30,7 +30,7 @@ createDeleteButton =(cell,row) => {
     }
 
 deleteRoute = (event) => {
-  axios.delete('http://localhost:8082/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
+  axios.delete('http://35.234.147.72:8080/Climbing/rest/Route/deleteRoute/' + event).then((response) => {
 window.location.reload();
   });
 
