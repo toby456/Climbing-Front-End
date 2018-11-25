@@ -12,7 +12,8 @@ class BSTable extends React.Component {
     return (
       <BootstrapTable className= "table-dark"
       data={ this.props.data }
-      options={ { noDataText: 'There are no routes for this user' } }>
+      options={ { noDataText: 'There are no routes for this user' } }
+      search>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='routeID' isKey={ true }>ID</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'7%'} dataField='climbStatus'>Climb Status</TableHeaderColumn>
       <TableHeaderColumn  tdStyle={{ whiteSpace: 'unset' }}  Column width={'5%'} dataField='difficulty'>Grade</TableHeaderColumn>
