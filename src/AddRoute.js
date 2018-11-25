@@ -6,12 +6,12 @@ import RouteForm from './RouteForm.js';
 class AddRoute extends Component {
 
   functionAddRoutes() {
-  ReactDOM.render(<RouteForm/>,document.getElementById('forms'));
+  ReactDOM.render(<RouteForm/>,document.getElementById('stuff'));
 }
   render() {
     return (
       <div>
-      <button className="btn btn-primary btn-lg" onClick={this.functionAddRoutes}>Create Route</button>
+      <button className="btn btn-info btn-lg" onClick={this.functionAddRoutes}>Create Route</button>
       </div>
     );
   }

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import CreateUserForm from './CreateUserForm'
+import CreateUserForm from './createUserForm'
 
 
 
 class CreateUserBtn extends Component {
 
   functionCreateUser() {
-  ReactDOM.render(<CreateUserForm/>,document.getElementById('forms'));
+  ReactDOM.render(<CreateUserForm/>,document.getElementById('stuff'));
 }
   render() {
     return (
       <div>
-      <button className="btn btn-primary btn-lg" onClick={this.functionCreateUser}>Create User</button>
+      <button className="btn btn-danger btn-lg" onClick={this.functionCreateUser}>Create User</button>
       </div>
     );
   }
